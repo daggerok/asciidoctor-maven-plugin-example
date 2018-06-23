@@ -4,7 +4,7 @@
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xl="http://www.w3.org/1999/xlink" version="5.0" xml:lang="en">
 <info>
 <title>{root-project-name} ({project-version})</title>
-<date>2018-06-23 21:54:03 UTC</date>
+<date>2018-06-23 22:27:11 UTC</date>
 <author>
 <personname>
 <firstname>Maksim</firstname>
@@ -16,7 +16,7 @@
 <revhistory>
 <revision>
 <revnumber>{project-version}</revnumber>
-<date>2018-06-23 21:54:03 UTC</date>
+<date>2018-06-23 22:27:11 UTC</date>
 <authorinitials>MK</authorinitials>
 </revision>
 </revhistory>
@@ -160,7 +160,7 @@ open http://127.0.0.1:3000</programlisting>
 <simpara><link xl:href="https://github.com/asciidoctor/asciidoctor-maven-plugin">asciidoctor-maven-plugin page</link></simpara>
 </listitem>
 <listitem>
-<simpara>linkhttps://github.com/asciidoctor/asciidoctor-maven-plugin/issues/27#issuecomment-17471627[some asciidoctor-maven-plugin example]</simpara>
+<simpara><link xl:href="https://github.com/asciidoctor/asciidoctor-maven-plugin/issues/27#issuecomment-17471627">asciidoctor-maven-plugin example</link></simpara>
 </listitem>
 </itemizedlist>
 </chapter>
