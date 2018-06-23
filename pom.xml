@@ -193,6 +193,7 @@
             </goals>
             <configuration>
               <baseDir>${docs}</baseDir>
+              <imagesDir>static</imagesDir>
               <sourceHighlighter>coderay</sourceHighlighter>
               <backend>html</backend>
               <attributes>
