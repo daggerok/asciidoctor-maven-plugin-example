@@ -1,10 +1,5 @@
 = asciidoctor-maven-plugin-example image:https://travis-ci.org/daggerok/asciidoctor-maven-plugin-example.svg?branch=master["Build Status", link="https://travis-ci.org/daggerok/asciidoctor-maven-plugin-example"]
 
-////
-image:https://gitlab.com/daggerok/asciidoctor-maven-plugin-example/badges/master/build.svg["Build Status", link="https://gitlab.com/daggerok/asciidoctor-maven-plugin-example/-/jobs"]
-image:https://img.shields.io/bitbucket/pipelines/daggerok/asciidoctor-maven-plugin-example.svg["Build Status", link="https://bitbucket.com/daggerok/asciidoctor-maven-plugin-example"]
-////
-
 //tag::content[]
 
 This project contains example of `maven-assemble-plugin` usage
