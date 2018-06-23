@@ -4,7 +4,7 @@
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xl="http://www.w3.org/1999/xlink" version="5.0" xml:lang="en">
 <info>
 <title>{root-project-name} ({project-version})</title>
-<date>2018-06-23 22:27:11 UTC</date>
+<date>2018-06-23 22:41:20 UTC</date>
 <author>
 <personname>
 <firstname>Maksim</firstname>
@@ -16,7 +16,7 @@
 <revhistory>
 <revision>
 <revnumber>{project-version}</revnumber>
-<date>2018-06-23 22:27:11 UTC</date>
+<date>2018-06-23 22:41:20 UTC</date>
 <authorinitials>MK</authorinitials>
 </revision>
 </revhistory>
@@ -48,7 +48,6 @@
          http://maven.apache.org/POM/4.0.0
          http://maven.apache.org/xsd/maven-4.0.0.xsd"&gt;
   &lt;build&gt;
-    &lt;defaultGoal&gt;clean process-resources&lt;/defaultGoal&gt;
     &lt;plugins&gt;
       &lt;plugin&gt;
         &lt;groupId&gt;org.asciidoctor&lt;/groupId&gt;
@@ -108,6 +107,7 @@
         &lt;/configuration&gt;
       &lt;/plugin&gt;
     &lt;/plugins&gt;
+    &lt;defaultGoal&gt;clean process-resources&lt;/defaultGoal&gt;
   &lt;/build&gt;
 &lt;/project&gt;</programlisting>
 </para>
