@@ -33,30 +33,28 @@ include::../README.adoc[tags=content]
 
 == Implementation
 
-.java example
-[source,java]
-----
-include::../src/main/java/daggerok/App.java[tags=content]
-----
-
 .plugion configuration
 [source,xml]
 ----
 include::../pom.xml[tags=content]
 ----
 
+NOTE: this plugin configured for base directory: `./docs`
+
 == Test usage
 
 .build fat jar
 [source,bash]
 ----
-./mvnw clean package
+./mvnw clean process-resources
 ----
 
 .run app
 [source,bash]
 ----
-java -jar target/*-all.jar
+npm i -g serve
+serve ./target/generated-docs
+open http://127.0.0.1:3000
 ----
 
 == Build documentation

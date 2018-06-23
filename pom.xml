@@ -100,7 +100,7 @@
 
   <!-- tag::content[] -->
   <build>
-    <defaultGoal>clean package</defaultGoal>
+    <defaultGoal>clean process-resources</defaultGoal>
     <plugins>
       <!-- end::content[] -->
       <plugin>
