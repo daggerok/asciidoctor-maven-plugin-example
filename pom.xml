@@ -270,7 +270,7 @@
             <artifactId>asciidoctorj-pdf</artifactId>
             <version>${asciidoctorj.pdf.version}</version>
           </dependency>
-        <dependencies>
+        </dependencies>
       </plugin>
     </plugins>
     <defaultGoal>clean process-resources</defaultGoal>
