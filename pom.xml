@@ -14,6 +14,8 @@
   <packaging>jar</packaging>
 
   <properties>
+    <asciidoctorj.version>1.5.6</asciidoctorj.version>
+    <asciidoctorj.pdf.version>1.5.0-alpha.16</asciidoctorj.pdf.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <junit.platform.version>1.2.0</junit.platform.version>
     <junit.jupiter.version>5.1.0</junit.jupiter.version>
@@ -187,6 +189,31 @@
         <version>1.5.6</version>
         <executions>
           <execution>
+            <id>output-pdf-doc</id>
+            <phase>generate-resources</phase>
+            <goals>
+              <goal>process-asciidoc</goal>
+            </goals>
+            <configuration>
+              <backend>pdf</backend>
+              <!-- Since 1.5.0-alpha.9 PDF back-end can use 'rouge' as well as 'coderay'
+              for source highlighting -->
+              <!-- Due to a known issue on windows, it is recommended to use 'coderay' until an new version of 'rouge' is released.
+              see discussions: https://github.com/asciidoctor/asciidoctor-maven-examples/pull/58
+                               https://github.com/asciidoctor/asciidoctorj-pdf/issues/3
+                               https://github.com/jneen/rouge/issues/661
+              -->
+              <sourceHighlighter>coderay</sourceHighlighter>
+              <attributes>
+                <icons>font</icons>
+                <pagenums/>
+                <toc/>
+                <idprefix/>
+                <idseparator>-</idseparator>
+              </attributes>
+            </configuration>
+          </execution>
+          <execution>
             <id>output-html</id>
             <phase>generate-resources</phase>
             <goals>
@@ -237,6 +264,13 @@
           <sourceDirectory>./docs</sourceDirectory>
           <headerFooter>true</headerFooter>
         </configuration>
+        <dependencies>
+          <dependency>
+            <groupId>org.asciidoctor</groupId>
+            <artifactId>asciidoctorj-pdf</artifactId>
+            <version>${asciidoctorj.pdf.version}</version>
+          </dependency>
+        <dependencies>
       </plugin>
     </plugins>
     <defaultGoal>clean process-resources</defaultGoal>
