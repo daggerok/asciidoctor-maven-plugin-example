@@ -60,5 +60,6 @@ ifdef::backend-html5[- link:./index.pdf[Documentation in PFD format]]
 
 == Other links
 
+- link:https://github.com/asciidoctor/asciidoctor-maven-examples[Asciidoctor maven examples]
 - link:https://github.com/asciidoctor/asciidoctor-maven-plugin[asciidoctor-maven-plugin page]
 - link:https://github.com/asciidoctor/asciidoctor-maven-plugin/issues/27#issuecomment-17471627[asciidoctor-maven-plugin example]
