@@ -566,7 +566,7 @@ table.CodeRay td.code>pre{padding:0}
 <span id="author" class="author">Maksim Kostromin</span><br>
 <span id="email" class="email"><a href="mailto:daggerok@gmail.com">daggerok@gmail.com</a></span><br>
 <span id="revnumber">version 0.0.1,</span>
-<span id="revdate">2018-06-27 02:19:06 UTC</span>
+<span id="revdate">2018-06-27 02:25:12 UTC</span>
 </div>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
@@ -620,6 +620,13 @@ table.CodeRay td.code>pre{padding:0}
         <span class="tag">&lt;groupId&gt;</span>org.asciidoctor<span class="tag">&lt;/groupId&gt;</span>
         <span class="tag">&lt;artifactId&gt;</span>asciidoctor-maven-plugin<span class="tag">&lt;/artifactId&gt;</span>
         <span class="tag">&lt;version&gt;</span>1.5.6<span class="tag">&lt;/version&gt;</span>
+        <span class="tag">&lt;dependencies&gt;</span>
+          <span class="tag">&lt;dependency&gt;</span>
+            <span class="tag">&lt;groupId&gt;</span>org.asciidoctor<span class="tag">&lt;/groupId&gt;</span>
+            <span class="tag">&lt;artifactId&gt;</span>asciidoctorj-pdf<span class="tag">&lt;/artifactId&gt;</span>
+            <span class="tag">&lt;version&gt;</span>1.5.0-alpha.16<span class="tag">&lt;/version&gt;</span>
+          <span class="tag">&lt;/dependency&gt;</span>
+        <span class="tag">&lt;/dependencies&gt;</span>
         <span class="tag">&lt;executions&gt;</span>
           <span class="tag">&lt;execution&gt;</span>
             <span class="tag">&lt;id&gt;</span>output-pdf-doc<span class="tag">&lt;/id&gt;</span>
@@ -629,12 +636,17 @@ table.CodeRay td.code>pre{padding:0}
             <span class="tag">&lt;/goals&gt;</span>
             <span class="tag">&lt;configuration&gt;</span>
               <span class="tag">&lt;backend&gt;</span>pdf<span class="tag">&lt;/backend&gt;</span>
-              <span class="comment">&lt;!-- Since 1.5.0-alpha.9 PDF back-end can use 'rouge' as well as 'coderay'
-              for source highlighting --&gt;</span>
-              <span class="comment">&lt;!-- Due to a known issue on windows, it is recommended to use 'coderay' until an new version of 'rouge' is released.
-              see discussions: https://github.com/asciidoctor/asciidoctor-maven-examples/pull/58
-                               https://github.com/asciidoctor/asciidoctorj-pdf/issues/3
-                               https://github.com/jneen/rouge/issues/661
+              <span class="comment">&lt;!--
+                Since 1.5.0-alpha.9 PDF back-end can use 'rouge' as well as 'coderay'
+                for source highlighting
+              --&gt;</span>
+              <span class="comment">&lt;!--
+                Due to a known issue on windows, it is recommended to use 'coderay'
+                until an new version of 'rouge' is released.
+
+                see discussions: https://github.com/asciidoctor/asciidoctor-maven-examples/pull/58
+                                 https://github.com/asciidoctor/asciidoctorj-pdf/issues/3
+                                 https://github.com/jneen/rouge/issues/661
               --&gt;</span>
               <span class="tag">&lt;sourceHighlighter&gt;</span>coderay<span class="tag">&lt;/sourceHighlighter&gt;</span>
               <span class="tag">&lt;attributes&gt;</span>
@@ -653,7 +665,7 @@ table.CodeRay td.code>pre{padding:0}
               <span class="tag">&lt;goal&gt;</span>process-asciidoc<span class="tag">&lt;/goal&gt;</span>
             <span class="tag">&lt;/goals&gt;</span>
             <span class="tag">&lt;configuration&gt;</span>
-              <span class="tag">&lt;baseDir&gt;</span>${docs}<span class="tag">&lt;/baseDir&gt;</span>
+              <span class="tag">&lt;baseDir&gt;</span>docs<span class="tag">&lt;/baseDir&gt;</span>
               <span class="tag">&lt;imagesDir&gt;</span>static<span class="tag">&lt;/imagesDir&gt;</span>
               <span class="tag">&lt;sourceHighlighter&gt;</span>coderay<span class="tag">&lt;/sourceHighlighter&gt;</span>
               <span class="tag">&lt;backend&gt;</span>html<span class="tag">&lt;/backend&gt;</span>
@@ -697,13 +709,6 @@ table.CodeRay td.code>pre{padding:0}
           <span class="tag">&lt;sourceDirectory&gt;</span>./docs<span class="tag">&lt;/sourceDirectory&gt;</span>
           <span class="tag">&lt;headerFooter&gt;</span>true<span class="tag">&lt;/headerFooter&gt;</span>
         <span class="tag">&lt;/configuration&gt;</span>
-        <span class="tag">&lt;dependencies&gt;</span>
-          <span class="tag">&lt;dependency&gt;</span>
-            <span class="tag">&lt;groupId&gt;</span>org.asciidoctor<span class="tag">&lt;/groupId&gt;</span>
-            <span class="tag">&lt;artifactId&gt;</span>asciidoctorj-pdf<span class="tag">&lt;/artifactId&gt;</span>
-            <span class="tag">&lt;version&gt;</span>${asciidoctorj.pdf.version}<span class="tag">&lt;/version&gt;</span>
-          <span class="tag">&lt;/dependency&gt;</span>
-        <span class="tag">&lt;/dependencies&gt;</span>
       <span class="tag">&lt;/plugin&gt;</span>
     <span class="tag">&lt;/plugins&gt;</span>
     <span class="tag">&lt;defaultGoal&gt;</span>clean process-resources<span class="tag">&lt;/defaultGoal&gt;</span>
@@ -795,7 +800,7 @@ open http://127.0.0.1:3000</code></pre>
 <div id="footer">
 <div id="footer-text">
 Version 0.0.1<br>
-Last updated 2018-06-27 02:19:06 UTC
+Last updated 2018-06-27 02:25:12 UTC
 </div>
 </div>
 </body>

@@ -4,7 +4,7 @@
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xl="http://www.w3.org/1999/xlink" version="5.0" xml:lang="en">
 <info>
 <title>{root-project-name} ({project-version})</title>
-<date>2018-06-27 02:19:06 UTC</date>
+<date>2018-06-27 02:25:12 UTC</date>
 <author>
 <personname>
 <firstname>Maksim</firstname>
@@ -16,7 +16,7 @@
 <revhistory>
 <revision>
 <revnumber>{project-version}</revnumber>
-<date>2018-06-27 02:19:06 UTC</date>
+<date>2018-06-27 02:25:12 UTC</date>
 <authorinitials>MK</authorinitials>
 </revision>
 </revhistory>
@@ -53,6 +53,13 @@
         &lt;groupId&gt;org.asciidoctor&lt;/groupId&gt;
         &lt;artifactId&gt;asciidoctor-maven-plugin&lt;/artifactId&gt;
         &lt;version&gt;1.5.6&lt;/version&gt;
+        &lt;dependencies&gt;
+          &lt;dependency&gt;
+            &lt;groupId&gt;org.asciidoctor&lt;/groupId&gt;
+            &lt;artifactId&gt;asciidoctorj-pdf&lt;/artifactId&gt;
+            &lt;version&gt;1.5.0-alpha.16&lt;/version&gt;
+          &lt;/dependency&gt;
+        &lt;/dependencies&gt;
         &lt;executions&gt;
           &lt;execution&gt;
             &lt;id&gt;output-pdf-doc&lt;/id&gt;
@@ -62,12 +69,17 @@
             &lt;/goals&gt;
             &lt;configuration&gt;
               &lt;backend&gt;pdf&lt;/backend&gt;
-              &lt;!-- Since 1.5.0-alpha.9 PDF back-end can use 'rouge' as well as 'coderay'
-              for source highlighting --&gt;
-              &lt;!-- Due to a known issue on windows, it is recommended to use 'coderay' until an new version of 'rouge' is released.
-              see discussions: https://github.com/asciidoctor/asciidoctor-maven-examples/pull/58
-                               https://github.com/asciidoctor/asciidoctorj-pdf/issues/3
-                               https://github.com/jneen/rouge/issues/661
+              &lt;!--
+                Since 1.5.0-alpha.9 PDF back-end can use 'rouge' as well as 'coderay'
+                for source highlighting
+              --&gt;
+              &lt;!--
+                Due to a known issue on windows, it is recommended to use 'coderay'
+                until an new version of 'rouge' is released.
+
+                see discussions: https://github.com/asciidoctor/asciidoctor-maven-examples/pull/58
+                                 https://github.com/asciidoctor/asciidoctorj-pdf/issues/3
+                                 https://github.com/jneen/rouge/issues/661
               --&gt;
               &lt;sourceHighlighter&gt;coderay&lt;/sourceHighlighter&gt;
               &lt;attributes&gt;
@@ -86,7 +98,7 @@
               &lt;goal&gt;process-asciidoc&lt;/goal&gt;
             &lt;/goals&gt;
             &lt;configuration&gt;
-              &lt;baseDir&gt;${docs}&lt;/baseDir&gt;
+              &lt;baseDir&gt;docs&lt;/baseDir&gt;
               &lt;imagesDir&gt;static&lt;/imagesDir&gt;
               &lt;sourceHighlighter&gt;coderay&lt;/sourceHighlighter&gt;
               &lt;backend&gt;html&lt;/backend&gt;
@@ -130,13 +142,6 @@
           &lt;sourceDirectory&gt;./docs&lt;/sourceDirectory&gt;
           &lt;headerFooter&gt;true&lt;/headerFooter&gt;
         &lt;/configuration&gt;
-        &lt;dependencies&gt;
-          &lt;dependency&gt;
-            &lt;groupId&gt;org.asciidoctor&lt;/groupId&gt;
-            &lt;artifactId&gt;asciidoctorj-pdf&lt;/artifactId&gt;
-            &lt;version&gt;${asciidoctorj.pdf.version}&lt;/version&gt;
-          &lt;/dependency&gt;
-        &lt;/dependencies&gt;
       &lt;/plugin&gt;
     &lt;/plugins&gt;
     &lt;defaultGoal&gt;clean process-resources&lt;/defaultGoal&gt;
