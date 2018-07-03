@@ -188,7 +188,7 @@
         <version>3.1.0</version>
         <configuration>
           <filesets>
-            <fileset><directory>${project.basedir}/public</directory></fileset>
+            <fileset><directory>${project.basedir}/target/generated-docs</directory></fileset>
           </filesets>
         </configuration>
       </plugin>
@@ -253,7 +253,7 @@
         <configuration>
           <sourceDirectory>docs</sourceDirectory>
           <preserveDirectories>true</preserveDirectories>
-          <outputDirectory>public</outputDirectory>
+          <outputDirectory>target/generated-docs</outputDirectory>
           <relativeBaseDir>true</relativeBaseDir>
           <headerFooter>true</headerFooter>
           <imagesDir>images</imagesDir>
