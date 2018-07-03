@@ -554,7 +554,7 @@ table.CodeRay td.code>pre{padding:0}
 <span id="author" class="author">Maksim Kostromin</span><br>
 <span id="email" class="email"><a href="mailto:daggerok@gmail.com">daggerok@gmail.com</a></span><br>
 <span id="revnumber">version 0.0.1,</span>
-<span id="revdate">2018-06-28 22:47:33 UTC</span>
+<span id="revdate">2018-07-03 20:54:11 UTC</span>
 </div>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
@@ -661,36 +661,39 @@ table.CodeRay td.code>pre{padding:0}
           <span class="tag">&lt;/execution&gt;</span>
         <span class="tag">&lt;/executions&gt;</span>
         <span class="tag">&lt;configuration&gt;</span>
-          <span class="tag">&lt;sourceDirectory&gt;</span>./docs<span class="tag">&lt;/sourceDirectory&gt;</span>
+          <span class="tag">&lt;sourceDirectory&gt;</span>docs<span class="tag">&lt;/sourceDirectory&gt;</span>
+          <span class="tag">&lt;preserveDirectories&gt;</span>true<span class="tag">&lt;/preserveDirectories&gt;</span>
+          <span class="tag">&lt;outputDirectory&gt;</span>target/generated-docs<span class="tag">&lt;/outputDirectory&gt;</span>
+          <span class="tag">&lt;relativeBaseDir&gt;</span>true<span class="tag">&lt;/relativeBaseDir&gt;</span>
           <span class="tag">&lt;headerFooter&gt;</span>true<span class="tag">&lt;/headerFooter&gt;</span>
-        <span class="tag">&lt;baseDir&gt;</span>docs<span class="tag">&lt;/baseDir&gt;</span>
-        <span class="tag">&lt;imagesDir&gt;</span>static<span class="tag">&lt;/imagesDir&gt;</span>
-        <span class="tag">&lt;sourceHighlighter&gt;</span>coderay<span class="tag">&lt;/sourceHighlighter&gt;</span>
-        <span class="tag">&lt;attributes&gt;</span>
-          <span class="tag">&lt;toc&gt;</span>left<span class="tag">&lt;/toc&gt;</span>
-          <span class="tag">&lt;linkcss&gt;</span>false<span class="tag">&lt;/linkcss&gt;</span>
-          <span class="tag">&lt;doctype&gt;</span>book<span class="tag">&lt;/doctype&gt;</span>
-          <span class="tag">&lt;ruby&gt;</span>erubis<span class="tag">&lt;/ruby&gt;</span>
-          <span class="tag">&lt;encoding&gt;</span>${project.build.sourceEncoding}<span class="tag">&lt;/encoding&gt;</span>
-          <span class="tag">&lt;linkattrs&gt;</span>true<span class="tag">&lt;/linkattrs&gt;</span>
-          <span class="tag">&lt;numbered&gt;</span>true<span class="tag">&lt;/numbered&gt;</span>
-          <span class="tag">&lt;sectanchors&gt;</span>true<span class="tag">&lt;/sectanchors&gt;</span>
-          <span class="tag">&lt;sectlink&gt;</span>true<span class="tag">&lt;/sectlink&gt;</span>
-          <span class="tag">&lt;idprefix</span><span class="tag">/&gt;</span>
-          <span class="tag">&lt;docinfo1</span><span class="tag">/&gt;</span>
-          <span class="tag">&lt;icons&gt;</span>font<span class="tag">&lt;/icons&gt;</span>
-          <span class="tag">&lt;idseparator&gt;</span>-<span class="tag">&lt;/idseparator&gt;</span>
-          <span class="tag">&lt;setanchors&gt;</span>true<span class="tag">&lt;/setanchors&gt;</span>
-          <span class="tag">&lt;source-highlighter&gt;</span>coderay<span class="tag">&lt;/source-highlighter&gt;</span>
-          <span class="tag">&lt;toc-title&gt;</span>Table of Contents<span class="tag">&lt;/toc-title&gt;</span>
-          <span class="tag">&lt;project-name&gt;</span>${project.artifactId}<span class="tag">&lt;/project-name&gt;</span>
-          <span class="tag">&lt;root-project-name&gt;</span>${project.artifactId}<span class="tag">&lt;/root-project-name&gt;</span>
-          <span class="tag">&lt;project-version&gt;</span>${project.version}<span class="tag">&lt;/project-version&gt;</span>
-          <span class="tag">&lt;github-url&gt;</span>https://github.com/daggerok/${project.artifactId}<span class="tag">&lt;/github-url&gt;</span>
-        <span class="tag">&lt;/attributes&gt;</span>
+          <span class="tag">&lt;imagesDir&gt;</span>images<span class="tag">&lt;/imagesDir&gt;</span>
+          <span class="tag">&lt;sourceHighlighter&gt;</span>coderay<span class="tag">&lt;/sourceHighlighter&gt;</span>
+          <span class="tag">&lt;attributes&gt;</span>
+            <span class="tag">&lt;toc&gt;</span>left<span class="tag">&lt;/toc&gt;</span>
+            <span class="tag">&lt;linkcss&gt;</span>false<span class="tag">&lt;/linkcss&gt;</span>
+            <span class="tag">&lt;doctype&gt;</span>book<span class="tag">&lt;/doctype&gt;</span>
+            <span class="tag">&lt;ruby&gt;</span>erubis<span class="tag">&lt;/ruby&gt;</span>
+            <span class="tag">&lt;encoding&gt;</span>${project.build.sourceEncoding}<span class="tag">&lt;/encoding&gt;</span>
+            <span class="tag">&lt;linkattrs&gt;</span>true<span class="tag">&lt;/linkattrs&gt;</span>
+            <span class="tag">&lt;numbered&gt;</span>true<span class="tag">&lt;/numbered&gt;</span>
+            <span class="tag">&lt;sectanchors&gt;</span>true<span class="tag">&lt;/sectanchors&gt;</span>
+            <span class="tag">&lt;sectlink&gt;</span>true<span class="tag">&lt;/sectlink&gt;</span>
+            <span class="tag">&lt;idprefix</span><span class="tag">/&gt;</span>
+            <span class="tag">&lt;docinfo1</span><span class="tag">/&gt;</span>
+            <span class="tag">&lt;icons&gt;</span>font<span class="tag">&lt;/icons&gt;</span>
+            <span class="tag">&lt;idseparator&gt;</span>-<span class="tag">&lt;/idseparator&gt;</span>
+            <span class="tag">&lt;setanchors&gt;</span>true<span class="tag">&lt;/setanchors&gt;</span>
+            <span class="tag">&lt;source-highlighter&gt;</span>coderay<span class="tag">&lt;/source-highlighter&gt;</span>
+            <span class="tag">&lt;toc-title&gt;</span>Table of Contents<span class="tag">&lt;/toc-title&gt;</span>
+            <span class="tag">&lt;project-name&gt;</span>${project.artifactId}<span class="tag">&lt;/project-name&gt;</span>
+            <span class="tag">&lt;root-project-name&gt;</span>${project.artifactId}<span class="tag">&lt;/root-project-name&gt;</span>
+            <span class="tag">&lt;project-version&gt;</span>${project.version}<span class="tag">&lt;/project-version&gt;</span>
+            <span class="tag">&lt;github-url&gt;</span>https://github.com/daggerok/${project.artifactId}<span class="tag">&lt;/github-url&gt;</span>
+          <span class="tag">&lt;/attributes&gt;</span>
         <span class="tag">&lt;/configuration&gt;</span>
       <span class="tag">&lt;/plugin&gt;</span>
     <span class="tag">&lt;/plugins&gt;</span>
+
     <span class="tag">&lt;defaultGoal&gt;</span>clean process-resources<span class="tag">&lt;/defaultGoal&gt;</span>
   <span class="tag">&lt;/build&gt;</span>
 <span class="tag">&lt;/project&gt;</span></code></pre>
@@ -780,7 +783,7 @@ open http://127.0.0.1:3000</code></pre>
 <div id="footer">
 <div id="footer-text">
 Version 0.0.1<br>
-Last updated 2018-06-28 22:47:33 UTC
+Last updated 2018-07-03 20:54:11 UTC
 </div>
 </div>
 </body>

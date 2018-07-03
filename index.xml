@@ -4,7 +4,7 @@
 <book xmlns="http://docbook.org/ns/docbook" xmlns:xl="http://www.w3.org/1999/xlink" version="5.0" xml:lang="en">
 <info>
 <title>asciidoctor-maven-plugin-example (0.0.1)</title>
-<date>2018-06-28 22:47:33 UTC</date>
+<date>2018-07-03 20:54:11 UTC</date>
 <author>
 <personname>
 <firstname>Maksim</firstname>
@@ -16,7 +16,7 @@
 <revhistory>
 <revision>
 <revnumber>0.0.1</revnumber>
-<date>2018-06-28 22:47:33 UTC</date>
+<date>2018-07-03 20:54:11 UTC</date>
 <authorinitials>MK</authorinitials>
 </revision>
 </revhistory>
@@ -106,36 +106,39 @@
           &lt;/execution&gt;
         &lt;/executions&gt;
         &lt;configuration&gt;
-          &lt;sourceDirectory&gt;./docs&lt;/sourceDirectory&gt;
+          &lt;sourceDirectory&gt;docs&lt;/sourceDirectory&gt;
+          &lt;preserveDirectories&gt;true&lt;/preserveDirectories&gt;
+          &lt;outputDirectory&gt;target/generated-docs&lt;/outputDirectory&gt;
+          &lt;relativeBaseDir&gt;true&lt;/relativeBaseDir&gt;
           &lt;headerFooter&gt;true&lt;/headerFooter&gt;
-        &lt;baseDir&gt;docs&lt;/baseDir&gt;
-        &lt;imagesDir&gt;static&lt;/imagesDir&gt;
-        &lt;sourceHighlighter&gt;coderay&lt;/sourceHighlighter&gt;
-        &lt;attributes&gt;
-          &lt;toc&gt;left&lt;/toc&gt;
-          &lt;linkcss&gt;false&lt;/linkcss&gt;
-          &lt;doctype&gt;book&lt;/doctype&gt;
-          &lt;ruby&gt;erubis&lt;/ruby&gt;
-          &lt;encoding&gt;${project.build.sourceEncoding}&lt;/encoding&gt;
-          &lt;linkattrs&gt;true&lt;/linkattrs&gt;
-          &lt;numbered&gt;true&lt;/numbered&gt;
-          &lt;sectanchors&gt;true&lt;/sectanchors&gt;
-          &lt;sectlink&gt;true&lt;/sectlink&gt;
-          &lt;idprefix/&gt;
-          &lt;docinfo1/&gt;
-          &lt;icons&gt;font&lt;/icons&gt;
-          &lt;idseparator&gt;-&lt;/idseparator&gt;
-          &lt;setanchors&gt;true&lt;/setanchors&gt;
-          &lt;source-highlighter&gt;coderay&lt;/source-highlighter&gt;
-          &lt;toc-title&gt;Table of Contents&lt;/toc-title&gt;
-          &lt;project-name&gt;${project.artifactId}&lt;/project-name&gt;
-          &lt;root-project-name&gt;${project.artifactId}&lt;/root-project-name&gt;
-          &lt;project-version&gt;${project.version}&lt;/project-version&gt;
-          &lt;github-url&gt;https://github.com/daggerok/${project.artifactId}&lt;/github-url&gt;
-        &lt;/attributes&gt;
+          &lt;imagesDir&gt;images&lt;/imagesDir&gt;
+          &lt;sourceHighlighter&gt;coderay&lt;/sourceHighlighter&gt;
+          &lt;attributes&gt;
+            &lt;toc&gt;left&lt;/toc&gt;
+            &lt;linkcss&gt;false&lt;/linkcss&gt;
+            &lt;doctype&gt;book&lt;/doctype&gt;
+            &lt;ruby&gt;erubis&lt;/ruby&gt;
+            &lt;encoding&gt;${project.build.sourceEncoding}&lt;/encoding&gt;
+            &lt;linkattrs&gt;true&lt;/linkattrs&gt;
+            &lt;numbered&gt;true&lt;/numbered&gt;
+            &lt;sectanchors&gt;true&lt;/sectanchors&gt;
+            &lt;sectlink&gt;true&lt;/sectlink&gt;
+            &lt;idprefix/&gt;
+            &lt;docinfo1/&gt;
+            &lt;icons&gt;font&lt;/icons&gt;
+            &lt;idseparator&gt;-&lt;/idseparator&gt;
+            &lt;setanchors&gt;true&lt;/setanchors&gt;
+            &lt;source-highlighter&gt;coderay&lt;/source-highlighter&gt;
+            &lt;toc-title&gt;Table of Contents&lt;/toc-title&gt;
+            &lt;project-name&gt;${project.artifactId}&lt;/project-name&gt;
+            &lt;root-project-name&gt;${project.artifactId}&lt;/root-project-name&gt;
+            &lt;project-version&gt;${project.version}&lt;/project-version&gt;
+            &lt;github-url&gt;https://github.com/daggerok/${project.artifactId}&lt;/github-url&gt;
+          &lt;/attributes&gt;
         &lt;/configuration&gt;
       &lt;/plugin&gt;
     &lt;/plugins&gt;
+
     &lt;defaultGoal&gt;clean process-resources&lt;/defaultGoal&gt;
   &lt;/build&gt;
 &lt;/project&gt;</programlisting>
