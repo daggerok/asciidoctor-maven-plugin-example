@@ -181,6 +181,18 @@
           </dependency>
         </dependencies>
       </plugin>
+      
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-clean-plugin</artifactId>
+        <version>3.1.0</version>
+        <configuration>
+          <filesets>
+            <fileset><directory>${project.basedir}/public</directory></fileset>
+          </filesets>
+        </configuration>
+      </plugin>
+      
       <!-- tag::content[] -->
       <plugin>
         <groupId>org.asciidoctor</groupId>
@@ -239,36 +251,39 @@
           </execution>
         </executions>
         <configuration>
-          <sourceDirectory>./docs</sourceDirectory>
+          <sourceDirectory>docs</sourceDirectory>
+          <preserveDirectories>true</preserveDirectories>
+          <outputDirectory>public</outputDirectory>
+          <relativeBaseDir>true</relativeBaseDir>
           <headerFooter>true</headerFooter>
-        <baseDir>docs</baseDir>
-        <imagesDir>static</imagesDir>
-        <sourceHighlighter>coderay</sourceHighlighter>
-        <attributes>
-          <toc>left</toc>
-          <linkcss>false</linkcss>
-          <doctype>book</doctype>
-          <ruby>erubis</ruby>
-          <encoding>${project.build.sourceEncoding}</encoding>
-          <linkattrs>true</linkattrs>
-          <numbered>true</numbered>
-          <sectanchors>true</sectanchors>
-          <sectlink>true</sectlink>
-          <idprefix/>
-          <docinfo1/>
-          <icons>font</icons>
-          <idseparator>-</idseparator>
-          <setanchors>true</setanchors>
-          <source-highlighter>coderay</source-highlighter>
-          <toc-title>Table of Contents</toc-title>
-          <project-name>${project.artifactId}</project-name>
-          <root-project-name>${project.artifactId}</root-project-name>
-          <project-version>${project.version}</project-version>
-          <github-url>https://github.com/daggerok/${project.artifactId}</github-url>
-        </attributes>
+          <imagesDir>images</imagesDir>
+          <sourceHighlighter>coderay</sourceHighlighter>
+          <attributes>
+            <toc>left</toc>
+            <linkcss>false</linkcss>
+            <doctype>book</doctype>
+            <ruby>erubis</ruby>
+            <encoding>${project.build.sourceEncoding}</encoding>
+            <linkattrs>true</linkattrs>
+            <numbered>true</numbered>
+            <sectanchors>true</sectanchors>
+            <sectlink>true</sectlink>
+            <idprefix/>
+            <docinfo1/>
+            <icons>font</icons>
+            <idseparator>-</idseparator>
+            <setanchors>true</setanchors>
+            <source-highlighter>coderay</source-highlighter>
+            <toc-title>Table of Contents</toc-title>
+            <project-name>${project.artifactId}</project-name>
+            <root-project-name>${project.artifactId}</root-project-name>
+            <project-version>${project.version}</project-version>
+            <github-url>https://github.com/daggerok/${project.artifactId}</github-url>
+          </attributes>
         </configuration>
       </plugin>
     </plugins>
+
     <defaultGoal>clean process-resources</defaultGoal>
   </build>
 </project>
